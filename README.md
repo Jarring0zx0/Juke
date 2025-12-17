@@ -51,11 +51,13 @@ config = {
     hardware: CUDA,
     tickSkip: 8,
     actionDelay: 7,
-    Port: 191
+    Port: 191,
+    ForceNexto: false
 }
 ```
 
 > **Important:** Save this config to a safe location so you do not lose your setup.
+> keep "ForceNexto" on false for now
 
 ---
 
