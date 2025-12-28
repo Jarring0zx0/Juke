@@ -1,4 +1,4 @@
-# Juke v0.0.2 - C++ Variant Released
+# Juke v0.0.2a - C++ Variant Released
 
 Welcome to **Juke**: a public Rocket League SDK designed to make it easy to load Rocket League bots created with the GigaLearn framework.
 
@@ -33,6 +33,14 @@ Edit the configuration in the UI to set the following values:
   These values **must match the specifications used to train/export your bot**. Consult the bot's documentation or ask the bot creator for these numbers (or set them accordingly if you own the bot).
   Currently, Juke is built to support only AdvancedObsPadded, though other obs types may be supported in the future.
   Leave the device to "cuda", else the cpu will be used.
+
+- **Activation**: Supported values: "relu" (default), "leaky_relu", "tanh", "sigmoid", "elu", "selu", "gelu", "swish" (or "silu") .
+- ObsBuilder (important!)
+  - AdvancedObsPadded1v1 (the obsSize produced will be 109 , same as AdvancedObs, but not to make the confusion that they are the same! the OBS is entirely different, the size is similar)
+  - AdvancedObsPadded2v2
+  - AdvancedObsPadded or AdvancedObsPadded3v3 - **the normal AdvancedObsPadded**. produces an obsSize of 237. If you trained your bot with the normal AdvancedObsPadded (no teamsize modifications), please use this.
+  - AdvancedObsPadded4v4 - if you have an AdvancedObsPadded version with a teamSize of 4 in the header file, you should use this.
+  - AdvancedObs (normal advanced obs , size produced is 109)
 
 ---
 
